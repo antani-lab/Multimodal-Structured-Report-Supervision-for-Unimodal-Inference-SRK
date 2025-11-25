@@ -22,7 +22,7 @@ To leverage clinical text as a privileged training signal to improve the robustn
   A training regime where deterministic structured reports and raw clinical notes supervise the image encoder during training, but only the image head is used at test time (e.g., in real-world CAD/TB triage).
 
 - **Deterministic, PII-safe structured reports.**  
-  A report generation pipeline that converts metadata into structured, PII-free TB descriptions (status, subtype, distribution, location, extras), producing one `.txt` file per image and a CSV with synthetic reports and quality flags.
+  A report generation pipeline that converts metadata into structured, PII-free TB descriptions (status, subtype, distribution, location, extras), producing one `.txt` file per image and a CSV with structured reports and quality flags.
 
 - **Unimodal vs multimodal comparisons.**  
   Fully reproducible pipelines for:
@@ -75,14 +75,7 @@ Generate **deterministic structured reports** and optional **raw-style notes** f
 - Applies a rule-based template to build **PII-safe, deterministic** sentences such as:
   > “This pediatric chest radiograph shows active secondary tuberculosis on the right upper lobe with fibrous changes.”
 - Produces:
-  - A `.txt` file per image under a configurable `reports/` directory (one report per training/validation image).
-  - An augmented CSV with columns like:
-    - `Filename`
-    - `Class`
-    - `Clinical_Notes` (if available)
-    - `synthetic_report` (structured text)
-    - `status`, `subtype`, `distribution`, `extras`
-    - `low_confidence` (flag if the template could not confidently encode TB semantics).
+  - A `.txt` file per image under a configurable `reports/` directory (one report per training/validation image).  
 - Includes a **validator** that checks:
   - Every row in the CSV has a corresponding `.txt` file,
   - Template structure (e.g., must contain “chest radiograph”),
