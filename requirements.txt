@@ -1,0 +1,35 @@
+# Core numerical stack
+numpy==2.2.5
+pandas==2.2.3
+
+# Deep learning
+torch==2.7.0
+torchvision>=0.18.0
+
+# Transformers / CXR-BERT
+transformers==4.45.2
+
+# Classic ML + metrics
+scikit-learn==1.7.1
+
+# Image processing & augmentation
+albumentations==2.0.8
+opencv-python==4.10.0.84
+Pillow==11.0.0
+
+# Visualization
+matplotlib==3.9.2
+
+# Representation analysis
+umap-learn==0.5.6
+
+# Grad-CAM
+pytorch-grad-cam==1.5.0
+
+# Optional backbones (if you use timm-based encoders)
+timm==0.9.16
+
+# Logging / utilities (standard library covers most logging, so no extra libs needed)
+# Jupyter (for running the notebooks)
+notebook==7.2.2
+jupyterlab==4.2.5
