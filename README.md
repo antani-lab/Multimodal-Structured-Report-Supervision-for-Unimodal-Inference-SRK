@@ -73,7 +73,7 @@ Generate **deterministic structured reports** and optional **raw-style notes** f
 
 - Ingests the merged metadata (including TB status, subtype, distribution, and additional radiographic descriptors).
 - Applies a rule-based template to build **PII-safe, deterministic** sentences such as:
-  > “This pediatric chest radiograph shows active secondary tuberculosis on the right upper lobe with fibrous changes.”
+  > “This pediatric chest radiograph, shows secondary tuberculosis on the right upper lobe with fibrous changes.”
 - Produces:
   - A `.txt` file per image under a configurable `reports/` directory (one report per training/validation image).  
 - Includes a **validator** that checks:
