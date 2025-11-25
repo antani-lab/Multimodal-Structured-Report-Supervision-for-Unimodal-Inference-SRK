@@ -1,6 +1,6 @@
-# Beyond Pixels: Clinical Text-Supervised Multimodal Learning to Improve Unimodal Inference toward Tuberculosis Detection on Chest Radiographs
+# Beyond Pixels: Clinical Text-Supervised Multimodal Learning to Improve Unimodal Inference toward Generalizable Tuberculosis Detection on Chest Radiographs
 
-This repository contains the code for the study **“Beyond Pixels: Clinical Text-Supervised Multimodal Learning to Improve Unimodal Inference toward Tuberculosis Detection on Chest Radiographs.”** The project implements an alignment-regularized multimodal training strategy that uses clinically grounded text only during training as privileged supervision, while enabling **image-only inference** at deployment.
+This repository contains the code for the study **“Beyond Pixels: Clinical Text-Supervised Multimodal Learning to Improve Unimodal Inference toward Generalizable Tuberculosis Detection on Chest Radiographs.”** The project implements an alignment-regularized multimodal training strategy that uses clinically grounded text only during training as privileged supervision, while enabling **image-only inference** at deployment.
 
 We combine chest radiographs (CXRs) with deterministic, structured TB reports and raw clinical notes to regularize a vision encoder. The text channel is used exclusively during training to shape the image representations; at test time, the model operates purely on CXRs, matching the realities of screening and low-resource workflows where radiology reports may be missing or delayed.
 
